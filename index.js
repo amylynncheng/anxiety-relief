@@ -113,7 +113,7 @@ restService.post('/reply', function(req, res) {
               //text = "Please tell me a number between 1 and 10. ";
               text = "Although negative seconds would be cool, I can't do that... Maybe try a positive number. ";
               break;
-            } else if (customCount >= 0 && number == 0) {
+            } else if (customCount >= 0 && number.length != 0 && number == 0) {
               //text = "Please tell me a number between 1 and 10. ";
               text = "Zero seconds would not be very helpful... Maybe try another number, perhaps between 1 and 10. ";
               break;
