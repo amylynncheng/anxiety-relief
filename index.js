@@ -81,7 +81,7 @@ restService.post('/reply', function(req, res) {
               text = "Okay, how many seconds do you want to inhale your breaths for? ";
               customCount++;
               break;
-            } else if (customCount == 1 && number > 0 && number <= 15) {
+            } else if (customCount == 1 && number > 0 && number <= 10) {
               inhaleSeconds = number;
               var i = Math.floor(Math.random() * affirmations.length);
               var affirm1 = affirmations[i];
@@ -89,31 +89,31 @@ restService.post('/reply', function(req, res) {
               text = affirm1 + ". How many seconds do you want to hold your breaths for?";
               customCount++;
               break;
-            } else if (customCount == 2 && number > 0 && number <= 15) {
+            } else if (customCount == 2 && number > 0 && number <= 10) {
               holdingSeconds = number;
               var j = Math.floor(Math.random() * affirmations.length);
               var affirm2 = affirmations[j];
               
               text = affirm2 + ". Lastly, how many seconds do you want to exhale your breaths for?";
               customCount++;
-            } else if (customCount == 3 && number > 0 && number <= 15) {
+            } else if (customCount == 3 && number > 0 && number <= 10) {
               exhaleSeconds = number;
               canBegin = true;          
             } else if (customCount >= 0 && number == 69) {
-              //text = "Please tell me a number between 1 and 15. ";
-              text = "Haha, very funny. But you should pick another number, perhaps between 1 and 15. ";
+              //text = "Please tell me a number between 1 and 10. ";
+              text = "Haha, very funny. But you should pick another number, perhaps between 1 and 10. ";
               break;
-            } else if (customCount >= 0 && number > 15) {
-              //text = "Please tell me a number between 1 and 15. ";
-              text = "I don't think holding your breath for that long would be good for your relaxation... Maybe try a number between 1 and 15. ";
+            } else if (customCount >= 0 && number > 10) {
+              //text = "Please tell me a number between 1 and 10. ";
+              text = "I recommend a lower number for better relaxation... Maybe try a number between 1 and 10. ";
               break;
             } else if (customCount >= 0 && number < 0) {
-              //text = "Please tell me a number between 1 and 15. ";
+              //text = "Please tell me a number between 1 and 10. ";
               text = "Although negative seconds would be cool, I can't do that... Maybe try a positive number. ";
               break;
             } else if (customCount >= 0 && number == 0) {
-              //text = "Please tell me a number between 1 and 15. ";
-              text = "Zero seconds would not be very helpful... Maybe try another number, perhaps between 1 and 15. ";
+              //text = "Please tell me a number between 1 and 10. ";
+              text = "Zero seconds would not be very helpful... Maybe try another number, perhaps between 1 and 10. ";
               break;
             } 
           }
@@ -224,7 +224,7 @@ function customizedShortText() {
 
 function customizedShortTextRepeat() {
   var audio = "";
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     audio += "Inhale. " // for "+ inhaleSeconds + " seconds. "
     + "Hold. " // for " + holdingSeconds + " seconds. "
     + "Exhale. " // for " + exhaleSeconds + " seconds. "
