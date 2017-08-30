@@ -46,8 +46,8 @@ restService.post('/reply', function(req, res) {
   //var soundtrack = req.body.result.parameters.soundtracks;
   var number = req.body.result.parameters["number-integer"]; 
 
-  var text = "Relax.";
-  var shortText = "Relax.";
+  var text = "I'm running into a small error, but you can just say 'reset' to fix it.";
+  var shortText = "I'm running into a small error, but you can just say 'reset' to fix it.";
   var textNeedsChange = false;
   var endConversation = false;
 
@@ -143,6 +143,10 @@ restService.post('/reply', function(req, res) {
           shortText = customizedShortTextRepeat();
           textNeedsChange = true;
           break;
+              
+          case "reset":
+              text = "Okay, everything should be working now. Just pick any of the three options (start, customize, or info).";
+              break;
                 
         default: 
           text = "Error.";
