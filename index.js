@@ -61,6 +61,7 @@ restService.post('/reply', function(req, res) {
       switch (action) {
 
         case "begin.default":
+          customizing = false;
           inhaleSeconds = 4;
           holdingSeconds = 7;
           exhaleSeconds = 8;
