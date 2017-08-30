@@ -190,7 +190,7 @@ function replaceBreaks(text) {
 
 function customizedBreathingExercise() {
   var audio = "";
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     audio += "Inhale through your nose. <break time=\"" + inhaleSeconds + "s\"/> "
     + "Hold your breath. <break time=\"" + holdingSeconds + "s\"/> "
     + "Exhale through your mouth. <break time=\"" + exhaleSeconds + "s\"/> "
@@ -201,7 +201,7 @@ function customizedBreathingExercise() {
 
 function customizedBreathingRepeat() {
   var audio = "";
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     audio += "Inhale. <break time=\"" + inhaleSeconds + "s\"/> "
     + "Hold. <break time=\"" + holdingSeconds + "s\"/> "
     + "Exhale. <break time=\"" + exhaleSeconds + "s\"/> "
@@ -212,7 +212,7 @@ function customizedBreathingRepeat() {
 
 function customizedShortText() {
   var audio = "";
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     audio += "Inhale through your nose. " // for "+ inhaleSeconds + " seconds. "
     + "Hold your breath. " // for " + holdingSeconds + " seconds. "
     + "Exhale through your mouth. " // for " + exhaleSeconds + " seconds. "
