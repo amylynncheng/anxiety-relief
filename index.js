@@ -75,6 +75,7 @@ restService.post('/reply', function(req, res) {
         case "custom.breathing":
           if (req.body.result.parameters.customize == "customize") {
             customizing = true;
+            customCount = 0;
           }
 
           if (customizing) {
@@ -116,7 +117,10 @@ restService.post('/reply', function(req, res) {
               //text = "Please tell me a number between 1 and 10. ";
               text = "Zero seconds would not be very helpful... Maybe try another number, perhaps between 1 and 10. ";
               break;
-            } 
+            } else {
+              text = "I ran into a small error. Please help me out and say 'customize' again to fix it.";
+              break;
+            }
           }
 
           if (canBegin) {
